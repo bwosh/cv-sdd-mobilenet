@@ -21,8 +21,6 @@ while True:
     for detection in output[0, 0, :, :]:
         class_id = detection[1]
         confidence = detection[2]
-        #if confidence>0.5:
-            #print(class_id, id_class_name(id, ), confidence)
 
         if confidence > 0.5:
             left = detection[3] * cols
